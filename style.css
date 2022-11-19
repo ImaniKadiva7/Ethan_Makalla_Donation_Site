@@ -230,12 +230,46 @@ ul
   margin-bottom: 0px;
 }
 
+#check
+{
+  display: none;
+}
+
 .intro__text2
 {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  display: none;
+  transition: 0.5s linear;
 }
 
+label
+{
+  color: var(--primary-color);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+#check:checked ~ .intro__text2
+{
+  display: block;
+}
+
+#check:checked ~ label
+{
+  visibility: hidden;
+}
+
+#check:checked ~ label:after
+{
+  content: 'Show Less';
+  display: block;
+  visibility: visible;
+  margin-bottom: 7px;
+  color: var(--primary-color);
+}
 
 .btn
 {
@@ -363,6 +397,12 @@ body.is-black
   {
     font-size: 20px;
   }
+  label
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media(max-width: 767px)
@@ -451,5 +491,11 @@ body.is-black
   {
     display: flex;
     justify-content: center;
+  }
+  label
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
