@@ -117,6 +117,17 @@ ul
   width: 100%;
 }
 
+.active-link a
+{
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--text-color);
+  display: inline-flex;
+  position: relative;
+  padding-top: 5px;
+  border-bottom: 5px solid #6500FF;
+}
+
 .header__moon
 {
   display: flex;
